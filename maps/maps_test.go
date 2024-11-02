@@ -1,6 +1,9 @@
 package maps
 
-import "testing"
+import (
+	"golearn/utils"
+	"testing"
+)
 
 func TestSearch(t *testing.T) {
 	t.Run("search in a map for known", func(t *testing.T) {
@@ -13,7 +16,7 @@ func TestSearch(t *testing.T) {
 		want := 2
 
 		if got != want {
-			t.Errorf("got %v want %v", got, want)
+			utils.AssertCorrectMessage(t, got, want)
 		}
 	})
 

@@ -2,6 +2,7 @@ package di
 
 import (
 	"bytes"
+	"golearn/utils"
 	"testing"
 )
 
@@ -13,6 +14,6 @@ func TestGreet(t *testing.T) {
 	want := "Hello, Chris"
 
 	if got != want {
-		t.Errorf("got %q, want %q", got, want)
+		utils.AssertCorrectMessage(t, got, want)
 	}
 }

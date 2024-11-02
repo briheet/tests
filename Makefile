@@ -6,3 +6,7 @@ test:
 
 bench:
 	@go test -bench=. ./...
+
+gencover: 
+	@go test -coverprofile=coverage.out ./...
+	@go tool cover -html=coverage.out
