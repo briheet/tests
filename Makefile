@@ -12,7 +12,7 @@ gencover:
 	@go tool cover -html=coverage.out
 
 image:
-	@docker build -t gotest:v1 .
+	@docker build -t gotest:v1 -f Dockerfile.multistage .
 
 runx:
 	@docker run -p 5001:5001 gotest:v1
