@@ -2,8 +2,9 @@ package di
 
 import (
 	"bytes"
-	"golearn/utils"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestGreet(t *testing.T) {
@@ -14,6 +15,6 @@ func TestGreet(t *testing.T) {
 	want := "Hello, Chris"
 
 	if got != want {
-		utils.AssertCorrectMessage(t, got, want)
+		assert.Equal(t, got, want)
 	}
 }

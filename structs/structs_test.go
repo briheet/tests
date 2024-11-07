@@ -1,8 +1,9 @@
 package structs
 
 import (
-	"golearn/utils"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestRectangle(t *testing.T) {
@@ -12,7 +13,7 @@ func TestRectangle(t *testing.T) {
 		want := 40.0
 
 		if got != want {
-			utils.AssertCorrectMessage(t, got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 
@@ -22,7 +23,7 @@ func TestRectangle(t *testing.T) {
 		want := 100.00
 
 		if got != want {
-			utils.AssertCorrectMessage(t, got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 }
@@ -34,7 +35,7 @@ func TestCircle(t *testing.T) {
 		want := 25.132741228718345
 
 		if got != want {
-			utils.AssertCorrectMessage(t, got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 
@@ -44,7 +45,7 @@ func TestCircle(t *testing.T) {
 		want := 12.566370614359172
 
 		if got != want {
-			utils.AssertCorrectMessage(t, got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 }

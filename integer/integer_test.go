@@ -1,17 +1,18 @@
 package integer
 
 import (
-	"golearn/utils"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestAdd(t *testing.T) {
-	t.Run("add two integer", func(t *testing.T) {
-		got := Add(2, 2)
-		want := 4
+	t.Run("add two numbers", func(t *testing.T) {
+		got := Add(2, 3)
+		want := 5
 
 		if got != want {
-			utils.AssertCorrectMessage(t, got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 }
@@ -23,7 +24,7 @@ func TestSum(t *testing.T) {
 		want := 15
 
 		if got != want {
-			utils.AssertCorrectMessage(t, got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 }
@@ -34,7 +35,7 @@ func TestSumAll(t *testing.T) {
 		want := 16
 
 		if got != want {
-			utils.AssertCorrectMessage(t, got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 }

@@ -5,6 +5,8 @@ import (
 	"net/http/httptest"
 	"testing"
 	"time"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestRacer(t *testing.T) {
@@ -25,7 +27,7 @@ func TestRacer(t *testing.T) {
 		}
 
 		if got != want {
-			t.Errorf("got %q, want %q", got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 

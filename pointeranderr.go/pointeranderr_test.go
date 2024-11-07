@@ -1,8 +1,9 @@
 package pointeranderrgo
 
 import (
-	"golearn/utils"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestWallet(t *testing.T) {
@@ -14,6 +15,6 @@ func TestWallet(t *testing.T) {
 	want := 10
 
 	if got != want {
-		utils.AssertCorrectMessage(t, got, want)
+		assert.Equal(t, got, want)
 	}
 }

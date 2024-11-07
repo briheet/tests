@@ -1,8 +1,9 @@
 package iteration
 
 import (
-	"golearn/utils"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestRepeat(t *testing.T) {
@@ -11,7 +12,7 @@ func TestRepeat(t *testing.T) {
 		want := "aaaaa"
 
 		if got != want {
-			utils.AssertCorrectMessage(t, got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 
@@ -20,7 +21,7 @@ func TestRepeat(t *testing.T) {
 		want := ""
 
 		if got != want {
-			utils.AssertCorrectMessage(t, got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 }

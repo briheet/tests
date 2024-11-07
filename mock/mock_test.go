@@ -2,8 +2,9 @@ package mock
 
 import (
 	"bytes"
-	"golearn/utils"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestCountDown(t *testing.T) {
@@ -19,7 +20,7 @@ func TestCountDown(t *testing.T) {
 Go!`
 
 	if got != want {
-		utils.AssertCorrectMessage(t, got, want)
+		assert.Equal(t, got, want)
 	}
 
 	if spySleep.Calls != startingNumber {

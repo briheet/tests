@@ -1,8 +1,9 @@
 package maps
 
 import (
-	"golearn/utils"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestSearch(t *testing.T) {
@@ -16,7 +17,7 @@ func TestSearch(t *testing.T) {
 		want := 2
 
 		if got != want {
-			utils.AssertCorrectMessage(t, got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 
@@ -34,7 +35,7 @@ func TestSearch(t *testing.T) {
 		}
 
 		if err.Error() != want {
-			t.Errorf("err %v, want %v", err, want)
+			assert.Equal(t, err, want)
 		}
 	})
 }

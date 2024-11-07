@@ -1,8 +1,9 @@
 package hello
 
 import (
-	"golearn/utils"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestHello(t *testing.T) {
@@ -11,7 +12,7 @@ func TestHello(t *testing.T) {
 		want := "Hello, Chris"
 
 		if got != want {
-			utils.AssertCorrectMessage(t, got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 
@@ -20,7 +21,7 @@ func TestHello(t *testing.T) {
 		want := "Hello, World"
 
 		if got != want {
-			utils.AssertCorrectMessage(t, got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 
@@ -29,7 +30,7 @@ func TestHello(t *testing.T) {
 		want := "Hola, Elodie"
 
 		if got != want {
-			utils.AssertCorrectMessage(t, got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 
@@ -38,7 +39,7 @@ func TestHello(t *testing.T) {
 		want := "Hello, Chris"
 
 		if got != want {
-			utils.AssertCorrectMessage(t, got, want)
+			assert.Equal(t, got, want)
 		}
 	})
 }
