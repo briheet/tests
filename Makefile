@@ -10,3 +10,9 @@ bench:
 gencover: 
 	@go test -coverprofile=coverage.out ./...
 	@go tool cover -html=coverage.out
+
+image:
+	@docker build -t gotest:v1 .
+
+runx:
+	@docker run -p 5001:5001 gotest:v1

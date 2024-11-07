@@ -17,5 +17,18 @@ While i write applications via Test driven development, i tend to fuck up things
 ## For coverage generation
 
 `make gencover`
-
 Now check your browser
+
+## For building the image
+
+Either
+`docker build -t gotest:v1 .`
+Or
+`make image`
+
+## For running the image
+
+Either
+`docker run -p 5001:5001 gotest:v1`
+Or
+`make runx`
